@@ -1,0 +1,37 @@
+security:
+  ignored: /hystrix.stream
+  oauth2:
+    client:
+      clientId: user-service
+      clientSecret: '{cipher}AQBfhYNn4EdzxxIhj46k3UZKsxJRwozNqR778xRUf1B7QIIVSodTD35QZQVp60vLRRe/lHmjodTiGU4u3MfN3b3eqvkckYpTeit/4xHUuZMy0c6tUQGVI/4jNH4Z4d3WKxqhaXeSPgOGaboS+IjasSdsp4a7gWVzb5j4CXA97ZrIN7NP7fL90WMhybap2NM9p1JTZAqiyatXujb2ge6zwGYVsgZQsADdVtxlTUQ7ZfsvqQy4uKJHavImplMP3gbuEfZ9NWcpS5Zu80mI1AkS9QELVlclYhAWhBgS2UMFAHd0zTsCoEHQTRiUWUkf3aldzp3uDMeIc7b/xsIUfs7bi9DVAvN4K0J8Gdf02rPz9eUhMarPxxhZXXpfIZBAQ7dkKqOinrAw4DecXzdAE0w6g2TM'
+      user-authorization-uri: http://localhost:5000/auth/oauth/authorize
+      accessTokenUri: http://localhost:5000/auth/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      userInfoUri: http://localhost:5000/auth/users/current
+      preferTokenInfo: false
+      
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5433/user
+    username: postgres
+    password: '{cipher}AQB2rw+lp5MpTSO5g+ZQ068QjBow8O1XbzRBZ6AmslXfwmg+aBSOYpvyHVCA3Gk1kTDIsBFmsyv7d+EC9gTDSFqsKtTHAwwk189936r0aXvHVHCt6IG8VyKZ/7LittSq7N6o02KgC3SRoUxDSPHQKjgwN+0Tv/WrpGqyMmRzcIkhJ+QcZQ9dfwlqlyslNgmOZf6kNCx0ZOGijchvkcV7hAfEz76G9AqFSY7/mbF4Zkbyc79JtPJ4xxvq48NxCcb8NbTqltshjT5RxV96xnYSo2YpLo+mJoIL+a9oLYeH5WfwUgXvHM+hoBIE8A4shzBWNu1E0Mmuqm9M9aNSgZUn+X27CXiBaGcp7stA+aeH+q7eeWTU4uQhXY+oXkNpg98AW20='
+    driverClassName: org.postgresql.Driver
+
+server:
+  port: 9004
+
+management:
+  port: 9005
+
+eureka:
+  instance:
+    metadata-map:
+      management.port: 9005

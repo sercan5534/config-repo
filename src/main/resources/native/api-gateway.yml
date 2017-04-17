@@ -1,0 +1,60 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+    auth-service:
+        path: /auth/**
+        serviceId: auth-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    user-service:
+        path: /user/**
+        serviceId: user-service
+        stripPrefix: true
+        sensitiveHeaders:
+
+    payment-service:
+        path: /payment/**
+        serviceId: payment-service
+        stripPrefix: true
+        sensitiveHeaders:
+        
+    workorder-service:
+        path: /workorder/**
+        serviceId: workorder-service
+        stripPrefix: true
+        sensitiveHeaders:
+
+    property-service:
+        path: /property/**
+        serviceId: property-service
+        stripPrefix: true
+        sensitiveHeaders:
+
+proxy:
+  auth:
+    routes:
+      auth-service: oauth2
+      user-service: oauth2
+      payment-service: oauth2
+      workorder-service: oauth2
+      property-service: oauth2
+
+server:
+  port: 4000

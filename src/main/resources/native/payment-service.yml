@@ -1,0 +1,37 @@
+security:
+  ignored: /hystrix.stream
+  oauth2:
+    client:
+      clientId: payment-service
+      clientSecret: '{cipher}AQA5KsHWbMdmdS7h1EZUG7hTN+7IXnKwWoMsm0+BZOY0IwRGKWCoUeoQ9q9iR3+AWcDgYgP4c2+JwVCMZeRu+NPVV8Vs1C8V5yKG4YTmGYlVR4qKjiDnYvUEQ4Jy5hWn9jSeK0iKSJYFnUo9ZqJ2gQ8iuvoxZTTwmL4JgRESK8cscWHD8UKdCiplU5/eqLjANKusJlx/EG1+Yew3PDEORI5k+9l+OK1EiKD+XLe2DwBrgQPEuxzqDPh05xS5yT21kRaZRoQeIgeF7hXy47GDO/NAjF0LPzRINg7C9ECHp1lcQTo8QJ8Jh/fcA6fCUf+oiEoTNqHMZyUIZ/mGjoihK9SvoTWMeNsSY3huIWez7KqDYNdpkmrNtAk4ut7Z00PlCWHB/UbHqG3M57I5vGVTxfvDlMw627Gtm6YGB1UgFohFQA=='
+      user-authorization-uri: http://localhost:5000/auth/oauth/authorize
+      accessTokenUri: http://localhost:5000/auth/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      userInfoUri: http://localhost:5000/auth/users/current
+      preferTokenInfo: false
+      
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5433/payment
+    username: postgres
+    password: '{cipher}AQB2rw+lp5MpTSO5g+ZQ068QjBow8O1XbzRBZ6AmslXfwmg+aBSOYpvyHVCA3Gk1kTDIsBFmsyv7d+EC9gTDSFqsKtTHAwwk189936r0aXvHVHCt6IG8VyKZ/7LittSq7N6o02KgC3SRoUxDSPHQKjgwN+0Tv/WrpGqyMmRzcIkhJ+QcZQ9dfwlqlyslNgmOZf6kNCx0ZOGijchvkcV7hAfEz76G9AqFSY7/mbF4Zkbyc79JtPJ4xxvq48NxCcb8NbTqltshjT5RxV96xnYSo2YpLo+mJoIL+a9oLYeH5WfwUgXvHM+hoBIE8A4shzBWNu1E0Mmuqm9M9aNSgZUn+X27CXiBaGcp7stA+aeH+q7eeWTU4uQhXY+oXkNpg98AW20='
+    driverClassName: org.postgresql.Driver
+
+server:
+  port: 9000
+
+management:
+  port: 9001
+
+eureka:
+  instance:
+    metadata-map:
+      management.port: 9001

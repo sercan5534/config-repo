@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5433/auth
+    username: postgres
+    password: '{cipher}AQCLrnFrsNA1rkNFZq13V5InKr7FYElOVv6xr6JWBrF5sdZpbIohb44xCvHKOGE7uw2xIXem6GfCOeQmICBERCUTZScuHOITpy0icyrkUodEhoj1gprBh4juijhIdRba/YpVrxmoJnj766/s33AbYGwyfEJd66bl/uGkr1YohROgksN5hq6AIZ2ZSiyjztQ/yE3jx9yb/XWSWfuwFNIw6aAnPuS9xaANq1QFBAspQSjsksGwR1JYzx64SYNm+753cW1rBvLqnrjH3OuiNfWxu0fzmVEG0SEkRv60btGol4JgCwj6PS5RmciZry9D4BjktKnwR88LQKtoGPNo9BrKSn/AYSb6D96jMmq3esD280I/mJTLsyeLTjUhOKEOHaN6V2A='
+    driverClassName: org.postgresql.Driver
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+
+server:
+  context-path: /auth
+  port: 5000

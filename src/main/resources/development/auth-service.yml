@@ -1,0 +1,26 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    #TODO: Update IP with hostname
+    url: jdbc:postgresql://130.211.194.92:5432/auth
+    username: postgres
+    password: '{cipher}AQAD0CJonW0W/tioDJsuuO72iWfujGzbWYLeDE83JHV+RwHiMT2dM/GO57XwDMdMBk4upeKPLkzQCy9sSlvsU1sVWr1e4chFDxcjU2ps+YaCEYK08LChG+yqO9Rm0m1ZU7svSaGEATX64HjEqas6O8S+HJ9HTnQqezb1j0Js2TlVRrDSQ5Ztoi9j09BZmVwdl4d4abZdNtcguDXamqMLFadGS+0IBQzCoNILIgRPElmPgS5Z/7s4kiL7EHoIdPnvo56jj7CGfUrkq6Oq354XD9e3PKBPPMp74i+20kWxl0HixC/sCC9vbwMEFWf07CsYExz6AqngSzbhet8zxd3Kn+/rEpRTToHXJ4vUpPAVRek3y3G489h2cKgBufEhzsk9Sq4='
+    driverClassName: org.postgresql.Driver
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+
+server:
+  context-path: /auth
+  port: 5000
+
+eureka:
+  client:
+    enabled: false

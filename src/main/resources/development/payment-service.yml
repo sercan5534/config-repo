@@ -1,0 +1,40 @@
+security:
+  ignored: /hystrix.stream
+  oauth2:
+    client:
+      clientId: payment-service
+      clientSecret: '{cipher}AQBLy7YzHls5K+Uf4kdEKCiF8Pu8gVRUSNtJ9rbHlAjEWRiijNpgvYz3ZOw7U6dNyDTl0V2933PkdrV4hvI20/mguAiIKEq9qOZXOBi7rUBO8HxlEITikCqhU9LokST9NFz0yB6IEozvo0y/N0ayOsDqR5IqOpB4StRMmpi0oFry+yV3U2lihoIxGuG31ocD/zF0DsD9ithFk/Poksl9CYnKO2xl9Om/doxHBhnizXk3lpgwuv8vrxc/RALdyWI62R1WjUjHTAw52gtOY/WcCsDBlNI6TRqRmGYI6lSv3sArV+OcOpB7QCI45pswYnzMv7D1pg2mAWGsbI2sySWmv8NVF7gj0HSzlfxP35MA7dhVit5k4vlERr06XhBneMFGq1f6VQwFUCsuDXK1XjwT5cH6OuQSkyvnX8XiSuczZXdlHQ=='
+      user-authorization-uri: http://auth-service:5000/auth/oauth/authorize
+      accessTokenUri: http://auth-service:5000/auth/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      userInfoUri: http://auth-service:5000/auth/users/current
+      preferTokenInfo: false
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    #TODO: Update IP with hostname
+    url: jdbc:postgresql://130.211.194.92:5432/payment
+    username: postgres
+    password: '{cipher}AQAD0CJonW0W/tioDJsuuO72iWfujGzbWYLeDE83JHV+RwHiMT2dM/GO57XwDMdMBk4upeKPLkzQCy9sSlvsU1sVWr1e4chFDxcjU2ps+YaCEYK08LChG+yqO9Rm0m1ZU7svSaGEATX64HjEqas6O8S+HJ9HTnQqezb1j0Js2TlVRrDSQ5Ztoi9j09BZmVwdl4d4abZdNtcguDXamqMLFadGS+0IBQzCoNILIgRPElmPgS5Z/7s4kiL7EHoIdPnvo56jj7CGfUrkq6Oq354XD9e3PKBPPMp74i+20kWxl0HixC/sCC9vbwMEFWf07CsYExz6AqngSzbhet8zxd3Kn+/rEpRTToHXJ4vUpPAVRek3y3G489h2cKgBufEhzsk9Sq4='
+    driverClassName: org.postgresql.Driver
+
+server:
+  port: 9000
+
+management:
+  port: 9001
+
+eureka:
+  instance:
+    metadata-map:
+      management.port: 9001
+  client:
+    enabled: false

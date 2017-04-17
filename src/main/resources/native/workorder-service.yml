@@ -1,0 +1,37 @@
+security:
+  ignored: /hystrix.stream
+  oauth2:
+    client:
+      clientId: workorder-service
+      clientSecret: '{cipher}AQCQ26Z9KQqT4EkP12A+DPpAL3+P+rkAtR2xE3toLHpTsGcyOsGBGLhwb8NCCBXZNCYSGtN8pQelg6P1btnZvGPHvw4J4S58QtqJ5ihnGJipR16NRuhsFXpAIenpvPIl0KDe9PgLz0Dta2rw4ZOUHbHaDytvYqRYDljCEoxTxGxrk+88saDe9/FvHO2gMjFGZ+ad92BHO8ozKECOm0Y200V7Hu2hnYHI168lvfQPhNswrHEYFeSrwXyn8lpzNuJQlMtteJiRhSv6LeoQhdjFt9lonatI0r3kCG85o0Ei6N0prKUhrTGpECwIDHRwoIkBMHehte7eln/kMLIJC8UEeq8tp+QQ3Oqlh2CfOYObugJbmnOKFRCR7im6RGXArMEaAbCHYWWbM9A+atL/2VhbpYwPlT7OGbadLAW5e6loZl/ntg=='
+      user-authorization-uri: http://localhost:5000/auth/oauth/authorize
+      accessTokenUri: http://localhost:5000/auth/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      userInfoUri: http://localhost:5000/auth/users/current
+      preferTokenInfo: false
+      
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5433/workorder
+    username: postgres
+    password: '{cipher}AQB2rw+lp5MpTSO5g+ZQ068QjBow8O1XbzRBZ6AmslXfwmg+aBSOYpvyHVCA3Gk1kTDIsBFmsyv7d+EC9gTDSFqsKtTHAwwk189936r0aXvHVHCt6IG8VyKZ/7LittSq7N6o02KgC3SRoUxDSPHQKjgwN+0Tv/WrpGqyMmRzcIkhJ+QcZQ9dfwlqlyslNgmOZf6kNCx0ZOGijchvkcV7hAfEz76G9AqFSY7/mbF4Zkbyc79JtPJ4xxvq48NxCcb8NbTqltshjT5RxV96xnYSo2YpLo+mJoIL+a9oLYeH5WfwUgXvHM+hoBIE8A4shzBWNu1E0Mmuqm9M9aNSgZUn+X27CXiBaGcp7stA+aeH+q7eeWTU4uQhXY+oXkNpg98AW20='
+    driverClassName: org.postgresql.Driver
+
+server:
+  port: 9006
+
+management:
+  port: 9007
+
+eureka:
+  instance:
+    metadata-map:
+      management.port: 9007
