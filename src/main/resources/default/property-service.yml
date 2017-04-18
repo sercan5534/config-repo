@@ -3,7 +3,7 @@ security:
   oauth2:
     client:
       clientId: property-service
-      clientSecret: '{cipher}AQBhcrDHBZUi4WpK1lp5t+2NhRKzuV9HqAYxC0E4nsturiwbOlzYdSTqAnIzbi1YsgZws1k0J+6sjs7WKL+X/2i4pvaLVkvW2k4Flf1yDdpsWCerDODHS1p0T2kGAIR6FyopyQZeJwVK1REdEiJFZXW30+LnJTHYsq8jU5wdgErr77lwCHfkUG4l+AParDP0ovbVyqox/hThuOMQOs4aeTzUMbxjV0xCulpq2RUiPWKv0Z5AAd6iCXDZancpg/jysnsmlnkMwVjZxU+xpUriUeRvf3DDpqMtoi+6M0vSMRwpQXFm9tl5T8qzuRfXH8SZp2+W19kSkor1rG5D9Aly5EgKYK68otW55Ic7eyOQ4GAKhRiqcSQBjt0K02gzXEDEBeGdtwrWC+orv0iTsrmZ88Wu'
+      clientSecret: buhane_property
       user-authorization-uri: http://localhost:5000/auth/oauth/authorize
       accessTokenUri: http://localhost:5000/auth/oauth/token
       grant-type: client_credentials

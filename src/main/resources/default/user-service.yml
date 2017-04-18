@@ -3,7 +3,7 @@ security:
   oauth2:
     client:
       clientId: user-service
-      clientSecret: '{cipher}AQBfhYNn4EdzxxIhj46k3UZKsxJRwozNqR778xRUf1B7QIIVSodTD35QZQVp60vLRRe/lHmjodTiGU4u3MfN3b3eqvkckYpTeit/4xHUuZMy0c6tUQGVI/4jNH4Z4d3WKxqhaXeSPgOGaboS+IjasSdsp4a7gWVzb5j4CXA97ZrIN7NP7fL90WMhybap2NM9p1JTZAqiyatXujb2ge6zwGYVsgZQsADdVtxlTUQ7ZfsvqQy4uKJHavImplMP3gbuEfZ9NWcpS5Zu80mI1AkS9QELVlclYhAWhBgS2UMFAHd0zTsCoEHQTRiUWUkf3aldzp3uDMeIc7b/xsIUfs7bi9DVAvN4K0J8Gdf02rPz9eUhMarPxxhZXXpfIZBAQ7dkKqOinrAw4DecXzdAE0w6g2TM'
+      clientSecret: buhane_user
       user-authorization-uri: http://localhost:5000/auth/oauth/authorize
       accessTokenUri: http://localhost:5000/auth/oauth/token
       grant-type: client_credentials

@@ -3,7 +3,7 @@ security:
   oauth2:
     client:
       clientId: payment-service
-      clientSecret: '{cipher}AQA5KsHWbMdmdS7h1EZUG7hTN+7IXnKwWoMsm0+BZOY0IwRGKWCoUeoQ9q9iR3+AWcDgYgP4c2+JwVCMZeRu+NPVV8Vs1C8V5yKG4YTmGYlVR4qKjiDnYvUEQ4Jy5hWn9jSeK0iKSJYFnUo9ZqJ2gQ8iuvoxZTTwmL4JgRESK8cscWHD8UKdCiplU5/eqLjANKusJlx/EG1+Yew3PDEORI5k+9l+OK1EiKD+XLe2DwBrgQPEuxzqDPh05xS5yT21kRaZRoQeIgeF7hXy47GDO/NAjF0LPzRINg7C9ECHp1lcQTo8QJ8Jh/fcA6fCUf+oiEoTNqHMZyUIZ/mGjoihK9SvoTWMeNsSY3huIWez7KqDYNdpkmrNtAk4ut7Z00PlCWHB/UbHqG3M57I5vGVTxfvDlMw627Gtm6YGB1UgFohFQA=='
+      clientSecret: buhane_payment
       user-authorization-uri: http://localhost:5000/auth/oauth/authorize
       accessTokenUri: http://localhost:5000/auth/oauth/token
       grant-type: client_credentials

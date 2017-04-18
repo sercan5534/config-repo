@@ -3,7 +3,7 @@ security:
   oauth2:
     client:
       clientId: workorder-service
-      clientSecret: '{cipher}AQCQ26Z9KQqT4EkP12A+DPpAL3+P+rkAtR2xE3toLHpTsGcyOsGBGLhwb8NCCBXZNCYSGtN8pQelg6P1btnZvGPHvw4J4S58QtqJ5ihnGJipR16NRuhsFXpAIenpvPIl0KDe9PgLz0Dta2rw4ZOUHbHaDytvYqRYDljCEoxTxGxrk+88saDe9/FvHO2gMjFGZ+ad92BHO8ozKECOm0Y200V7Hu2hnYHI168lvfQPhNswrHEYFeSrwXyn8lpzNuJQlMtteJiRhSv6LeoQhdjFt9lonatI0r3kCG85o0Ei6N0prKUhrTGpECwIDHRwoIkBMHehte7eln/kMLIJC8UEeq8tp+QQ3Oqlh2CfOYObugJbmnOKFRCR7im6RGXArMEaAbCHYWWbM9A+atL/2VhbpYwPlT7OGbadLAW5e6loZl/ntg=='
+      clientSecret: buhane_workorder
       user-authorization-uri: http://localhost:5000/auth/oauth/authorize
       accessTokenUri: http://localhost:5000/auth/oauth/token
       grant-type: client_credentials

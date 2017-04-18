@@ -2,7 +2,7 @@ security:
   oauth2:
     client:
       clientId: monitor-service
-      clientSecret: '{cipher}AQAo2T1p+r/bFf30kogyXgdBhillYVM8U0yDgxf+HQsBAK8hAOTg6TGyPTUdyrKVE9Y4rQmGdfIUvBIVHrU9m9eWpgznSSQU/99co3VDGOVACjvTI/WYuv1dLEdhGT5V6or8AD58xp9wPeIJG+Gk1B1O9LnOG0UaN/FRYjEb00RhrertxldZjzrfbfepW6rMFj0tgaEB8HlUhGJHQY2+RPK82iPD7cp3RAaRc1FGrWmd1uFNmEr40AcAAYA09D8dBMxnAenwr4CCIbov02nR/ynKCEAINBNA/NmWen5DvvxkpH3ZSRjMirN11Aam7ShBVsEa7rreqlVoQJ4Fr1/klm4FVdhlaqZERefo6bkU/zxIQBS4ekMWGjmMR+ZcAg7DOpfKfjmS9Ssd4thw6ZKWnvW6'
+      clientSecret: buhane_monitor
       user-authorization-uri: http://localhost:5000/auth/oauth/authorize
       accessTokenUri: http://localhost:5000/auth/oauth/token
       grant-type: client_credentials
