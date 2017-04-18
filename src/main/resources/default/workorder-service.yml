@@ -20,9 +20,9 @@ spring:
       ddl-auto: update
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5433/workorder
+    url: jdbc:postgresql://127.0.0.1:5432/workorder
     username: postgres
-    password: '{cipher}AQB2rw+lp5MpTSO5g+ZQ068QjBow8O1XbzRBZ6AmslXfwmg+aBSOYpvyHVCA3Gk1kTDIsBFmsyv7d+EC9gTDSFqsKtTHAwwk189936r0aXvHVHCt6IG8VyKZ/7LittSq7N6o02KgC3SRoUxDSPHQKjgwN+0Tv/WrpGqyMmRzcIkhJ+QcZQ9dfwlqlyslNgmOZf6kNCx0ZOGijchvkcV7hAfEz76G9AqFSY7/mbF4Zkbyc79JtPJ4xxvq48NxCcb8NbTqltshjT5RxV96xnYSo2YpLo+mJoIL+a9oLYeH5WfwUgXvHM+hoBIE8A4shzBWNu1E0Mmuqm9M9aNSgZUn+X27CXiBaGcp7stA+aeH+q7eeWTU4uQhXY+oXkNpg98AW20='
+    password: buhane
     driverClassName: org.postgresql.Driver
 
 server:
