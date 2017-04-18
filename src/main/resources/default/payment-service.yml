@@ -33,5 +33,6 @@ management:
 
 eureka:
   instance:
+    preferIpAddress: true
     metadata-map:
       management.port: 9001
