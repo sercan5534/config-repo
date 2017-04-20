@@ -20,7 +20,7 @@ spring:
       ddl-auto: update
   datasource:
     platform: postgres
-    url: jdbc:postgresql://${DB_SERVER}/auth
+    url: jdbc:postgresql://${DB_SERVER}/payment
     username: ${DB_USER}
     password: ${DB_PASSWORD}
     driverClassName: org.postgresql.Driver
