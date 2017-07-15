@@ -1,0 +1,39 @@
+security:
+  ignored: /hystrix.stream
+  oauth2:
+    client:
+      clientId: mail-service
+      clientSecret: '{cipher}***'
+      user-authorization-uri: http://auth-service:5000/auth/oauth/authorize
+      accessTokenUri: http://auth-service:5000/auth/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      userInfoUri: http://auth-service:5000/auth/users/current
+      preferTokenInfo: false
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://${DB_SERVER}/mail
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driverClassName: org.postgresql.Driver
+
+server:
+  port: 9008
+
+management:
+  port: 9009
+
+eureka:
+  instance:
+    metadata-map:
+      management.port: 9009
+  client:
+    enabled: false
