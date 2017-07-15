@@ -1,0 +1,38 @@
+security:
+  ignored: /hystrix.stream
+  oauth2:
+    client:
+      clientId: mail-service
+      clientSecret: buhane_mail
+      user-authorization-uri: http://localhost:5000/auth/oauth/authorize
+      accessTokenUri: http://localhost:5000/auth/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      userInfoUri: http://localhost:5000/auth/users/current
+      preferTokenInfo: false
+      
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://127.0.0.1:5432/mail
+    username: postgres
+    password: buhane
+    driverClassName: org.postgresql.Driver
+
+server:
+  port: 9008
+
+management:
+  port: 9009
+
+eureka:
+  instance:
+    preferIpAddress: true
+    metadata-map:
+      management.port: 9009
